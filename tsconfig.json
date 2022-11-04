@@ -9,9 +9,9 @@
     "module": "esnext",
     "moduleResolution": "node",
     "strict": true,
-    "target": "es2017",
+    "target": "es2019",
     "outDir": "dist/build",
-    "lib": ["es2017"]
+    "lib": ["es2019"]
   },
   "files": ["src/index.ts"],
 }

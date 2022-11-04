@@ -22,8 +22,8 @@
   ],
   "scripts": {
     "build": "tsc -p . && rollup -c",
-    "test": "jest",
-    "version": "npm run build",
+    "test": ".bin/jest",
+    "version": "build",
     "release": "np --no-release-draft"
   },
   "dependencies": {
@@ -31,19 +31,19 @@
     "tsutils": "3.0.0"
   },
   "peerDependencies": {
-    "@typescript-eslint/eslint-plugin": "<5 && ^4.0.0",
-    "@typescript-eslint/parser": "<5 && ^4.0.0",
-    "eslint": "<8 && ^7.0.0",
-    "eslint-plugin-react": "^7.0.0",
+    "@typescript-eslint/eslint-plugin": "<6 && ^5.0.0",
+    "@typescript-eslint/parser": "<6 && ^5.0.0",
+    "eslint": "<9 && ^8.0.0",
+    "eslint-plugin-react": "^7.27.0",
     "typescript": "^4.0.8"
   },
   "devDependencies": {
-    "@types/eslint": "^7.28.2",
+    "@types/eslint": "^8.4.9",
     "@types/jest": "^27.0.2",
-    "@typescript-eslint/eslint-plugin": "^4.23.0",
-    "@typescript-eslint/parser": "^4.23.0",
-    "eslint": "^7.32.0",
-    "eslint-plugin-react": "^7.26.1",
+    "@typescript-eslint/eslint-plugin": "^5.42.0",
+    "@typescript-eslint/parser": "^5.42.0",
+    "eslint": "^8.26.0",
+    "eslint-plugin-react": "^7.31.10",
     "jest": "^27.2.4",
     "jest-cli": "^27.2.4",
     "np": "^7.5.0",
