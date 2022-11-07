@@ -1,4 +1,5 @@
 import { Rule } from 'eslint';
+import ts from 'typescript';
 import { isPrivate, stencilComponentContext, stencilDecorators } from '../utils';
 
 const rule: Rule.RuleModule = {
@@ -23,14 +24,16 @@ const rule: Rule.RuleModule = {
           return;
         }
         const originalNode = parserServices.esTreeNodeToTSNodeMap.get(node);
-        const stencilDecorator = originalNode.decorators && originalNode.decorators.some(
+        if (ts.canHaveDecorators(originalNode)) {
+          const stencilDecorator =  (ts.getDecorators(originalNode) || []).some(
             (dec: any) => stencilDecorators.includes(dec.expression.expression.escapedText));
-        if (!stencilDecorator && !isPrivate(originalNode)) {
-          context.report({
-            node: node,
-            message: `Own class properties cannot be public`,
+          if (!stencilDecorator && !isPrivate(originalNode)) {
+            context.report({
+              node: node,
+              message: `Own class properties cannot be public`,
 
-          });
+            });
+          }
         }
       }
     };
