@@ -1,3 +1,4 @@
+// @ts-nocheck
 @Component({ tag: 'no-start-sample-tag' })
 export class NoStartSampleTag {
 

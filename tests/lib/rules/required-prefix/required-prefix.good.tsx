@@ -1,3 +1,4 @@
+// @ts-nocheck
 @Component({ tag: 'app-sample-tag' })
 export class SampleTag {
 

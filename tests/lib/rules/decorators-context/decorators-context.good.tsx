@@ -1,3 +1,5 @@
+// @ts-nocheck
+// @ts-nocheck
 @Component({ tag: 'sample-tag' })
 export class SampleTag {
 

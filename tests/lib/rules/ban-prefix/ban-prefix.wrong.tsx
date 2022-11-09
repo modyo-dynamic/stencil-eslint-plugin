@@ -1,3 +1,4 @@
+// @ts-nocheck
 @Component({ tag: 'stnl-sample-tag' })
 export class SampleTag {
 

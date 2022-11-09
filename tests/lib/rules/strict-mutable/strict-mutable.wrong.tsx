@@ -1,3 +1,4 @@
+// @ts-nocheck
 @Component({ tag: 'sample-tag' })
 export class SampleTag {
   @Prop({ mutable: false }) readonly test?: string;
